@@ -36,6 +36,10 @@ void input(int baihaqi[]) {
                     temp[k] = baihaqi[i];
                     i++;
                 }
-
+                else {
+                    temp[k] = baihaqi[FA];
+                    FA++;
+                }
+                k++;
         }
   
