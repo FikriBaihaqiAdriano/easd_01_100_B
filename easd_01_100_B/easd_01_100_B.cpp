@@ -12,66 +12,9 @@
 #include <iostream>
 using namespace std;
 
-const int MAX = 5; // jumlah maksimum data
+const int MAX = 120; // jumlah dari batasan data NIM = 100 (100 + 20 -2 * 15 + 10 + 10) = 120
 
 // input data
-void input(int arr[]) {
-    cout << "Masukkan " << MAX << " data: \n";
-    for (int i = 0; i < MAX; i++) {
-        cin >> arr[i];
-    }
-}
-
-// merge sort
-void mergeSort(int arr[], int left, int right) {
-    if (left < right) {
-        int mid = (left + right) / 2;
-        mergeSort(arr, left, mid);
-        mergeSort(arr, mid + 1, right);
-        int i = left;
-        int j_FA = mid + 1; // ganti j dengan inisial nama
-        int k = 0;
-        int temp[MAX];
-        while (i <= mid && j_FA <= right) {
-            if (arr[i] < arr[j_FA]) {
-                temp[k] = arr[i];
-                i++;
-            }
-            else {
-                temp[k] = arr[j_FA];
-                j_FA++;
-            }
-            k++;
-        }
-        while (i <= mid) {
-            temp[k] = arr[i];
-            i++;
-            k++;
-        }
-        while (j_FA <= right) {
-            temp[k] = arr[j_FA];
-            j_FA++;
-            k++;
-        }
-        for (int p = 0; p < k; p++) {
-            arr[left + p] = temp[p];
-        }
-    }
-}
-
-// tampilkan hasil
-void display(int arr[]) {
-    cout << "Hasil sorting: ";
-    for (int i = 0; i < MAX; i++) {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-}
-
-int main() {
-    int arr[MAX];
-    input(arr);
-    mergeSort(arr, 0, MAX - 1);
-    display(arr);
-    return 0;
+void input(int baihaqi[]) {
+  
 }
