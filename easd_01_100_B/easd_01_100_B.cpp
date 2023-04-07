@@ -31,5 +31,11 @@ void input(int baihaqi[]) {
             int FA = mid + 1; // ganti variabel j sesuai inisial 
             int k = 0;
             int temp[MAX];
+            while (i <= mid && FA <= right) {
+                if (baihaqi[i] < baihaqi[FA]) {
+                    temp[k] = baihaqi[i];
+                    i++;
+                }
+
         }
   
