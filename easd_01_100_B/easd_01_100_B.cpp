@@ -20,3 +20,13 @@ void input(int baihaqi[]) {
 	for (int i = 0; i < MAX; i++) {
 		cin >> baihaqi[i];
 }
+	
+// merge sort
+    void mergeSort(int baihaqi[], int left, int right) {
+        if (left < right) {
+            int mid = (left + right) / 2;
+            mergeSort(baihaqi, left, mid);
+            mergeSort(baihaqi, mid + 1, right);
+            int i = left;
+        }
+  
