@@ -47,6 +47,11 @@ void input(int baihaqi[]) {
                 i++;
                 k++;
             }
+            while (FA <= right) {
+                temp[k] = baihaqi[FA];
+                FA++;
+                k++;
+            }
 
         }
   
