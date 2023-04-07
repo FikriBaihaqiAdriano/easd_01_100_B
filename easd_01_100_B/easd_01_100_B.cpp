@@ -16,61 +16,62 @@ const int MAX = 120; // jumlah dari batasan data NIM = 100 (100 + 20 -2 * 15 + 1
 
 // input data
 void input(int baihaqi[]) {
-	cout << "Masukkan " << MAX << " data: \n";
-	for (int i = 0; i < MAX; i++) {
-		cin >> baihaqi[i];
+    cout << "Masukkan " << MAX << " data: \n";
+    for (int i = 0; i < MAX; i++) {
+        cin >> baihaqi[i];
+    }
 }
-	
+
 // merge sort
-    void mergeSort(int baihaqi[], int left, int right) {
-        if (left < right) {
-            int mid = (left + right) / 2;
-            mergeSort(baihaqi, left, mid);
-            mergeSort(baihaqi, mid + 1, right);
-            int i = left;
-            int FA = mid + 1; // ganti variabel j sesuai inisial 
-            int k = 0;
-            int temp[MAX];
-            while (i <= mid && FA <= right) {
-                if (baihaqi[i] < baihaqi[FA]) {
-                    temp[k] = baihaqi[i];
-                    i++;
-                }
-                else {
-                    temp[k] = baihaqi[FA];
-                    FA++;
-                }
-                k++;
-            }
-            while (i <= mid) {
+void mergeSort(int baihaqi[], int left, int right) {
+    if (left < right) {
+        int mid = (left + right) / 2;
+        mergeSort(baihaqi, left, mid);
+        mergeSort(baihaqi, mid + 1, right);
+        int i = left;
+        int FA = mid + 1; // ganti variabel j sesuai inisial 
+        int k = 0;
+        int temp[MAX];
+        while (i <= mid && FA <= right) {
+            if (baihaqi[i] < baihaqi[FA]) {
                 temp[k] = baihaqi[i];
                 i++;
-                k++;
             }
-            while (FA <= right) {
+            else {
                 temp[k] = baihaqi[FA];
                 FA++;
-                k++;
             }
-            for (int p = 0; p < k; p++) {
-                baihaqi[left + p] = temp[p];
-            }
+            k++;
+        }
+        while (i <= mid) {
+            temp[k] = baihaqi[i];
+            i++;
+            k++;
+        }
+        while (FA <= right) {
+            temp[k] = baihaqi[FA];
+            FA++;
+            k++;
+        }
+        for (int p = 0; p < k; p++) {
+            baihaqi[left + p] = temp[p];
         }
     }
+}
 
-    // tampilkan hasil
-    void display(int arr[]) {
-        cout << "Hasil sorting: ";
-        for (int i = 0; i < MAX; i++) {
-            cout << arr[i] << " ";
-        }
-        cout << endl;
+// tampilkan hasil
+void display(int arr[]) {
+    cout << "Hasil sorting: ";
+    for (int i = 0; i < MAX; i++) {
+        cout << arr[i] << " ";
     }
+    cout << endl;
+}
 
-    int main() {
-        int baihaqi[MAX];
-        input(baihaqi);
-        mergeSort(baihaqi, 0, MAX - 1);
-        display(baihaqi);
-        return 0;
-    }
+int main() {
+    int baihaqi[MAX];
+    input(baihaqi);
+    mergeSort(baihaqi, 0, MAX - 1);
+    display(baihaqi);
+    return 0;
+}
