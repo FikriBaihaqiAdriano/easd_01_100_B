@@ -66,3 +66,11 @@ void input(int baihaqi[]) {
         }
         cout << endl;
     }
+
+    int main() {
+        int baihaqi[MAX];
+        input(baihaqi);
+        mergeSort(baihaqi, 0, MAX - 1);
+        display(baihaqi);
+        return 0;
+    }
