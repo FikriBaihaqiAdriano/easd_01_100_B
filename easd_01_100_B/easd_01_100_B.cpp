@@ -17,4 +17,6 @@ const int MAX = 120; // jumlah dari batasan data NIM = 100 (100 + 20 -2 * 15 + 1
 // input data
 void input(int baihaqi[]) {
 	cout << "Masukkan " << MAX << " data: \n";
+	for (int i = 0; i < MAX; i++) {
+		cin >> baihaqi[i];
 }
