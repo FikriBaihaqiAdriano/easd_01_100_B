@@ -55,6 +55,14 @@ void input(int baihaqi[]) {
             for (int p = 0; p < k; p++) {
                 baihaqi[left + p] = temp[p];
             }
-
         }
-  
+    }
+
+    // tampilkan hasil
+    void display(int arr[]) {
+        cout << "Hasil sorting: ";
+        for (int i = 0; i < MAX; i++) {
+            cout << arr[i] << " ";
+        }
+        cout << endl;
+    }
