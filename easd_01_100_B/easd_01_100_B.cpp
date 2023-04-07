@@ -29,5 +29,7 @@ void input(int baihaqi[]) {
             mergeSort(baihaqi, mid + 1, right);
             int i = left;
             int FA = mid + 1; // ganti variabel j sesuai inisial 
+            int k = 0;
+            int temp[MAX];
         }
   
